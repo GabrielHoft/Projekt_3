@@ -112,7 +112,7 @@ vector<vector<double>> generowanie_kernela_gaussa_2D(double sigma) {
 
 PYBIND11_MODULE(_core, m) {
     m.doc() = "przetwarzanie sygnalow";
-    m.def("wyswietlanie_sygnalu", &wyswietlanie_sygnalu, pyt::arg("time"), pyt::arg("signal"), pyt::arg("title") = "");
+    m.def("wyswietlanie_sygnalu", &wyswietlanie_sygnalu, pyt::arg("czas"), pyt::arg("sygnal"), pyt::arg("nazwa") = "");
     m.def("generowanie_sin", &generowanie_sin);
     m.def("generowanie_cos", &generowanie_cos);
     m.def("generowanie_pros", &generowanie_pros);
